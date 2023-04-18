@@ -1,0 +1,42 @@
+body {
+    background-color: rgb(236, 164, 176);
+}
+
+#love-box {
+    width: 600px;
+    height: 400px;
+    background-color: rgb(255, 185, 196);
+    margin: auto;
+    margin-top: 13%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#si {
+    font-size: 20px;
+    width: 10%;
+    margin-right: 150px;
+}
+
+#no {
+    font-size: 20px;
+    width: 10%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin-left: 50px;
+}
+
+#love-box section {
+    text-align: center;
+    position: absolute;
+    top: 33%;
+    font-size: 27px;
+}
+
+.button-container-relativo {
+    position: relative;
+}

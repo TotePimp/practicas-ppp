@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Caja con botones</title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    
+  <div id="love-box">
+    <section id="texto">
+        Eres maricon?
+    </section>
+    <button id="si" onclick="cambiarColor(); cambiarTexto();">Sí</button>
+    <button id="no">No</button>
+  </div>
+  
+  <script>
+    const loveBox = document.querySelector('#love-box');
+    const noButton = document.querySelector('#no');
+    
+    function moveNoButton() {
+      const boxWidth = loveBox.offsetWidth - noButton.offsetWidth;
+      const boxHeight = loveBox.offsetHeight - noButton.offsetHeight;
+      const randomX = Math.floor(Math.random() * boxWidth);
+      const randomY = Math.floor(Math.random() * boxHeight);
+      noButton.style.left = `${randomX}px`;
+      noButton.style.top = `${randomY}px`;
+    }
+    
+    noButton.addEventListener('click', moveNoButton);
+
+    function cambiarColor() {
+  var caja = document.getElementById("love-box");
+  caja.style.backgroundImage = "linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet)";
+}
+
+function cambiarTexto() {
+      var texto = document.getElementById("texto");
+      texto.textContent = "AG MIERDA SAFA NOMAS CONCHATUMARE";
+    }
+
+  </script>
+</body>
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Script piola</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <article id="love-box">
+
+        <section>hola</section>
+
+        <div class="button-container-relativo">
+
+        <button id="si">Sí</button>
+        <button id="no">No</button>
+
+        </div>
+
+    </article>
+
+    <script>
+
+  /*
+
+  Para mover el botón con ID "no" a una posición aleatoria dentro 
+  de la caja cuando se hace clic, puedes utilizar JavaScript para 
+  cambiar la posición del botón en la página.
+
+  Primero, necesitarás agregar un controlador de eventos al botón "no" 
+  para que ejecute una función cada vez que se haga clic en él. 
+  Puedes hacer esto utilizando el siguiente código JavaScript:
+
+  */
+
+var noButton = document.getElementById('no');
+noButton.addEventListener('click', moveButton);
+/*
+
+Esto obtiene el botón con ID "no" y agrega un controlador de eventos 
+para que ejecute la función moveButton() cuando se haga clic en él.
+
+La función moveButton() puede ser algo así:
+
+*/
+function moveButton() {
+  var box = document.getElementById('love-box');
+  var noButton = document.getElementById('no');
+
+  // Obtener un número aleatorio para la posición X del botón
+  var randomX = Math.floor(Math.random() * (box.clientWidth - noButton.clientWidth));
+var randomY = Math.floor(Math.random() * (box.clientHeight - noButton.clientHeight));
+
+
+  // Establecer la posición del botón
+  noButton.style.left = randomX + 'px';
+  noButton.style.top = randomY + 'px';
+  }
+
+/*
+
+Esto obtiene el botón con ID "no" y agrega un controlador de eventos 
+para que ejecute la función moveButton() cuando se haga clic en él.
+
+La función moveButton() puede ser algo así:
+
+*/
+
+    </script>
+</body>
+</html>
+ -->
